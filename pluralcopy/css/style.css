@@ -1,0 +1,283 @@
+*{
+  box-sizing: border-box;
+}
+
+
+body{
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  background: #181818;
+  color: #fff;
+  overflow: hidden;
+}
+
+
+h1{
+  font-weight:300;
+}
+
+
+
+/* wrapper */
+
+
+#wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* using the flex property we can have one side take up one half and the right the other*/
+/*do meda query for the bigger screens 4:6 --> right would be bigger */
+/*can have a flex item also be a flex box as we'll see in a sec */
+
+#left{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /*because its flex dir is col when it's usually row ->
+  when using align-items it will do it like justify content (horz center as opposed
+  to vertical) and vice versa */
+  align-items: center;
+  height: 100vh; /* do this to take up the entire browser height --
+  verticall no matter how big or small the browers' resized*/
+  justify-content: center;
+}
+
+#right{
+  flex: 1;
+}
+
+
+
+/* Sign in */
+#sign-in{
+  display: flex;
+  flex-direction: column;/* so it can display up and down not left -> right */
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding-bottom: 1rem; /* push footing down a lil bit */
+}
+
+
+#sign-in form{
+  width: 80%;
+  padding-bottom:3rem;
+}
+
+
+/*dont have to use signin here but more organized and you know its
+in the sign in */
+#sign-in .logo{
+  margin-bottom: 8vh;
+
+}
+
+#sign-in .logo img{
+  width: 300px;
+}
+
+#sign-in label{
+  font-size: 0.9rem;
+  line-height: 2rem; /* push the input down a bit */
+  font-weight: 500;
+}
+
+
+#sign-in .text-input{
+  margin-bottom: 1.3rem; /* push things down a bit */
+  width: 100%; /* want the input to go all the way across */
+  border-radius: 2px;
+  background: #181818;
+  border: 1px solid #555;
+  color: #ccc;
+  padding: 0.5rem 1rem;
+  line-height: 1.3rem;
+}
+
+#sign-in .primary-btn{
+/* the two above (before fixing) ---> username and password
+were bigger/ wider than the button bc we added padding -> boxmodel fix*/
+
+  width: 100%;
+}
+
+#sign-in .secondary-btn,
+.or,
+.links{
+  width: 60%;
+}
+
+#sign-in .links a{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+#sign-in .or{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+
+#sign-in .or .bar{
+  flex: auto;
+  border:none;
+  height: 1px;
+  background: #aaa;
+}
+
+#sign-in .or span{
+  color: #ccc;
+  padding: 0 0.8rem;
+}
+
+#showcase{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://image.ibb.co/cO9Lxq/login-bg.jpg") no-repeat center center / cover; /* center center -> x and y axis */
+  height: 100vh;
+  text-align: center;
+}
+
+#showcase .secondary-btn{
+  width: 60%;
+  margin: auto; /* so its always in the middle */
+}
+
+
+#showcase .showcase-text{
+  font-size: 3rem;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 1.5rem;
+
+}
+
+
+/* Footer */
+#main-footer{
+  color: #ccc;
+  text-align: center;
+  font-size: 0.8rem; /*make it a bit smaller */
+  max-width: 80%;
+  padding-top: 5rem; /* wanna push it down quite a bit */
+}
+
+#main-footer a{
+  color: #f96816;
+  text-decoration: underline;
+}
+
+
+
+
+/* Button */
+/*dont want all of them to span across all */
+.primary-btn{
+  padding: 0.7rem 1rem; /* lets make it thicker/bigger so add rem */
+  height: 2.7rem;
+  display: block; /* so its on its own line */
+  border: 0; /* dont want a border on this */
+  border-radius: 2px;
+  font-weight: 500;
+  background: #f96816;
+  color: #fff;
+  text-decoration: none; /*take away underline */
+  cursor: pointer; /* want the cursor to be a pointer when we hover over it */
+  text-align: center;
+  transition: background-color 0.5s; /* adding transition (all props 0.5seconds ) -> as long
+  as property is something that can transition it will & we're going to
+  have the color change slightly -> adding a transition will it allow it to
+  slowly fade into that color rather than to just switch to that color
+  when you hover over it */
+
+}
+
+.primary-btn:hover{
+  background-color: #ff7b39; /*had transition all before this - only this so doesnt matter */
+
+}
+
+.secondary-btn{
+  padding: 0.7rem 1rem; /* lets make it thicker/bigger so add rem */
+  height: 2.7rem;
+  display: block; /* so its on its own line */
+  border: 1px solid #f4f4f4; /* dont want a border on this */
+  border-radius: 2px;
+  font-weight: 500;
+  background: none;
+  color: #fff;
+  text-decoration: none; /*take away underline */
+  cursor: pointer; /* want the cursor to be a pointer when we hover over it */
+  text-align: center;
+  transition: all 0.5s; /* adding transition (all props 0.5seconds ) -> as long
+  as property is something that can transition it will & we're going to
+  have the color change slightly -> adding a transition will it allow it to
+  slowly fade into that color rather than to just switch to that color
+  when you hover over it */
+
+}
+
+.secondary-btn:hover{
+  border-color: #ff7b39; /*had transition all before this - only this so doesnt matter */
+  color: #ff7b39;
+}
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* if the size of the browser is larger than 1200px -> then change
+the orientation (make the right side bigger) */
+@media (min-width: 1200px) {
+  /* if the browser is 1200px or bigger, 'kick' these styles in */
+  #left{
+    flex:4;
+  }
+  #right{
+    flex: 6;
+  }
+
+}
+
+
+/* now for smaller screens -> anything that is 768px and under
+these styles will 'kick in'/ come into affect */
+
+/* ^^ now without those its fine but without a mobile device
+theyre much shorter than this -> and right now set to
+overflow: hidden meaning we wont even have scroll bars -> make this less
+long */
+
+@media (max-width:768px){
+  body{
+    overflow: auto;
+  }
+  #sign-in .logo{
+    margin-bottom: 2vh;
+  }
+
+  #sign-in .text-input{
+    margin-bottom: 0.7rem;
+  }
+  #left{
+    justify-content: start;
+    margin-top: 4vh
+  }
+  #right{
+    display: none;
+  }
+  #main-footer{
+    padding-top: 1rem;
+  }
+}

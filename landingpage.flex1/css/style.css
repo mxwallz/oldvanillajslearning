@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin:0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  padding: 0;
+  font-size: 17px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+#showcase{
+  background-image: url("../img/lightback.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+#showcase h1{
+  font-size: 50px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+#showcase p{
+  font-size: 20px;
+}
+
+
+#showcase .button{
+  font-size: 18px;
+  text-decoration: none;
+  color:  #fff;
+  border:  #fff 1px solid;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+
+#showcase .button:hover{
+  background:  #926239;
+  color: #fff;
+}
+
+
+#section-a{
+  padding: 20px;
+  background-color:  #926239;
+  color: #fff;
+  text-align: center;
+}
+
+#section-b{
+  padding: 20px;
+  background-color:  #f4f4f4;
+  color: #926239;
+  text-align: center;
+}
+
+#section-c{
+  display:flex;
+
+}
+
+
+#section-c .box1, #section-c .box3{
+  background:  #926239;
+  color: #fff;
+
+}
+
+#section-c div{
+  padding: 20px;
+}
+
+#section-c .box2{
+  background:  #f4f4f4;
+color: #926239;
+
+
+}
